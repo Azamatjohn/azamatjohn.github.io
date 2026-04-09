@@ -199,12 +199,24 @@
     <div class="section-eyebrow">Contact</div>
     <h2>Let's work together</h2>
     <div class="contact-grid reveal">
-      <div class="contact-form-area">
-        <div class="form-group"><label>Your Name</label><input type="text" placeholder="John Smith"/></div>
-        <div class="form-group"><label>Email Address</label><input type="email" placeholder="john@company.com"/></div>
-        <div class="form-group"><label>Message</label><textarea placeholder="Tell me about the project or opportunity..."></textarea></div>
-        <button class="form-submit">Send Message</button>
-      </div>
+      <form action="https://formspree.io/f/xdapvzwd" method="POST">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" name="name" required placeholder="John Smith"/>
+        </div>
+      
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" name="email" required placeholder="john@company.com"/>
+        </div>
+      
+        <div class="form-group">
+          <label>Message</label>
+          <textarea name="message" required placeholder="Tell me about the project or opportunity..."></textarea>
+        </div>
+      
+        <button type="submit" class="form-submit">Send Message</button>
+      </form>
       <div class="contact-info">
         <h3>Open to meaningful conversations.</h3>
         <p>If you're working on a product that needs a reliable backend and someone who takes ownership of their code — feel free to reach out. I'm always open to opportunities to build solid systems.</p>
@@ -264,13 +276,13 @@
     navAnchors.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
   });
 
-  // Contact form
-  document.querySelector('.form-submit').addEventListener('click', () => {
-    const btn = document.querySelector('.form-submit');
-    btn.textContent = '✓ Message Sent!';
-    btn.style.background = '#134f37';
-    setTimeout(() => { btn.textContent = 'Send Message'; btn.style.background = ''; }, 3000);
-  });
+  // // Contact form
+  // document.querySelector('.form-submit').addEventListener('click', () => {
+  //   const btn = document.querySelector('.form-submit');
+  //   btn.textContent = '✓ Message Sent!';
+  //   btn.style.background = '#134f37';
+  //   setTimeout(() => { btn.textContent = 'Send Message'; btn.style.background = ''; }, 3000);
+  // });
 
   // Hamburger menu
   const hamburger = document.getElementById('hamburger');
