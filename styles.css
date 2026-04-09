@@ -101,7 +101,7 @@ nav {
 
 /* ── HERO ── */
 #hero {
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   padding-top: 64px;
@@ -413,7 +413,7 @@ footer span {
 @media (max-width: 600px) {
   .skills-grid, .projects-grid { grid-template-columns: 1fr; }
   nav .nav-links { gap: 1rem; }
-  nav .nav-links li:nth-child(n+3):not(:last-child) { display: none; }
+  /* nav .nav-links li:nth-child(n+3):not(:last-child) { display: none; } */
 }
 
 
