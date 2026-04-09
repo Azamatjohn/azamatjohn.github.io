@@ -11,22 +11,23 @@
 <body>
 
 <nav>
-  <div class="nav-inner">
-    <div class="nav-logo">Azamatjon<span>.</span></div>
-  
-    <div class="nav-right">
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#contact" class="nav-cta">Contact</a></li>
-      </ul>
-  
-      <button class="theme-toggle" id="themeToggle">🌙</button>
+    <div class="nav-inner">
+      <div class="nav-logo">Azamatjon<span>.</span></div>
+      <div class="nav-right">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about" onclick="closeMenu()">About</a></li>
+          <li><a href="#skills" onclick="closeMenu()">Skills</a></li>
+          <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
+          <li><a href="#blog" onclick="closeMenu()">Blog</a></li>
+          <li><a href="#contact" class="nav-cta" onclick="closeMenu()">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" title="Toggle dark/light mode">🌙</button>
+        <button class="hamburger" id="hamburger" title="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
 <section id="hero">
   <div class="hero-bg-grid"></div>
@@ -256,11 +257,11 @@
 
   // Nav active state
   const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-links a:not(.nav-cta)');
+  const navAnchors = document.querySelectorAll('.nav-links a:not(.nav-cta)');
   window.addEventListener('scroll', () => {
     let current = '';
     sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) current = s.id; });
-    navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
+    navAnchors.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
   });
 
   // Contact form
@@ -270,6 +271,20 @@
     btn.style.background = '#134f37';
     setTimeout(() => { btn.textContent = 'Send Message'; btn.style.background = ''; }, 3000);
   });
+
+  // Hamburger menu
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('navLinks');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    navMenu.classList.toggle('open');
+  });
+
+  function closeMenu() {
+    hamburger.classList.remove('open');
+    navMenu.classList.remove('open');
+  }
 </script>
 </body>
 </html>
