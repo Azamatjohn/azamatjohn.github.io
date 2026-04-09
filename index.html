@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Azamatjon Abdulazizov — Backend Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Instrument+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">Azamatjon<span>.</span></div>
+  
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+  
+      <button class="theme-toggle" id="themeToggle">🌙</button>
+    </div>
+  </div>
+</nav>
+
+<section id="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-bg-fade"></div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge">Available for opportunities</div>
+      <h1>Backend<br>Developer<br><span class="accent">&amp; Engineer.</span></h1>
+      <p class="hero-sub">I build backend systems that work in production — not just on my laptop. Python · Django · FastAPI · PostgreSQL · Cloud Deployment.</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-card">
+        <div class="hero-card-header">
+          <div class="hc-dot hc-r"></div><div class="hc-dot hc-y"></div><div class="hc-dot hc-g"></div>
+          <div class="hc-title">pizza_api/main.py</div>
+        </div>
+        <div class="hero-card-body">
+          <div><span class="c-cm"># Pizza Delivery Backend</span></div>
+          <div><span class="c-kw">from</span> fastapi <span class="c-kw">import</span> FastAPI, Depends</div>
+          <div><span class="c-kw">from</span> .auth <span class="c-kw">import</span> require_auth</div>
+          <div><span class="c-kw">from</span> .database <span class="c-kw">import</span> get_db</div>
+          <br>
+          <div>app = <span class="c-fn">FastAPI</span>(title=<span class="c-str">"PizzaAPI"</span>)</div>
+          <br>
+          <div>@app.<span class="c-fn">post</span>(<span class="c-str">"/orders"</span>)</div>
+          <div><span class="c-kw">async def</span> <span class="c-fn">create_order</span>(</div>
+          <div>&nbsp;&nbsp;order: OrderSchema,</div>
+          <div>&nbsp;&nbsp;user = <span class="c-fn">Depends</span>(require_auth),</div>
+          <div>&nbsp;&nbsp;db = <span class="c-fn">Depends</span>(get_db)</div>
+          <div>):</div>
+          <div>&nbsp;&nbsp;<span class="c-kw">return</span> db.<span class="c-fn">create</span>(order)</div>
+          <br>
+          <div><span class="c-cm"># ✓ Deployed · ✓ Auth · ✓ DB</span><span class="c-cursor"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="section-wrap">
+    <div class="section-eyebrow">About Me</div>
+    <h2>Business student.<br>Backend engineer.</h2>
+    <div class="about-grid reveal">
+      <div class="about-text">
+        <p>I'm a <strong>4th-year Global Business Administration student</strong> at Busan University of Foreign Studies — starting my senior year this spring. My academic background is business, but my day-to-day work is deeply technical: Python, Django, FastAPI, SQL, and cloud deployment.</p>
+        <p>I've built and deployed multiple backend projects, handling <strong>real production environments</strong> — environment variables, database connections, authentication flows. These weren't one-click demos. I debugged deployment failures, fixed database relationship issues, resolved API errors, and stabilized applications until they <strong>actually worked</strong>.</p>
+        <p>What I bring to a team is <strong>execution</strong>. I don't freeze when something breaks. I don't rely on guesswork. I read documentation, dig through logs, and improve a project until it's stable enough to be trusted.</p>
+      </div>
+      <div class="about-aside">
+        <div class="about-list">
+          <div class="about-list-item"><span class="ali-label">University</span><span class="ali-val">BUFS, South Korea</span></div>
+          <div class="about-list-item"><span class="ali-label">Degree</span><span class="ali-val">Bachelor</span></div>
+          <div class="about-list-item"><span class="ali-label">Year</span><span class="ali-val">4th year (Senior)</span></div>
+          <div class="about-list-item"><span class="ali-label">Focus</span><span class="ali-val">Backend Engineering</span></div>
+          <div class="about-list-item"><span class="ali-label">Location</span><span class="ali-val">Busan, South Korea 🇰🇷</span></div>
+        </div>
+        <div class="about-stats-row">
+          <div class="mini-stat"><div class="mini-stat-num">3+</div><div class="mini-stat-label">Projects Shipped</div></div>
+          <div class="mini-stat"><div class="mini-stat-num">∞</div><div class="mini-stat-label">Bugs Resolved</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="section-wrap">
+    <div class="section-eyebrow">Technical Skills</div>
+    <h2>What I work with</h2>
+    <p class="section-sub">A focused stack built around Python backend development, REST API design, and cloud-hosted production environments.</p>
+    <div class="skills-grid reveal">
+      <div class="skill-group"><div class="skill-icon">🐍</div><div class="skill-group-title">Languages</div><div class="skill-tags"><span class="tag">Python</span><span class="tag">SQL</span></div></div>
+      <div class="skill-group"><div class="skill-icon">⚡</div><div class="skill-group-title">Frameworks</div><div class="skill-tags"><span class="tag">Django</span><span class="tag">FastAPI</span></div></div>
+      <div class="skill-group"><div class="skill-icon">🔌</div><div class="skill-group-title">APIs &amp; Auth</div><div class="skill-tags"><span class="tag">REST APIs</span><span class="tag">JWT</span><span class="tag">Authentication</span></div></div>
+      <div class="skill-group"><div class="skill-icon">🗄️</div><div class="skill-group-title">Database</div><div class="skill-tags"><span class="tag">PostgreSQL</span><span class="tag">Schema Design</span><span class="tag">Relationships</span></div></div>
+      <div class="skill-group"><div class="skill-icon">☁️</div><div class="skill-group-title">DevOps &amp; Cloud</div><div class="skill-tags"><span class="tag">DigitalOcean</span><span class="tag">Railway</span><span class="tag">Git</span><span class="tag">Env Config</span></div></div>
+      <div class="skill-group"><div class="skill-icon">🏗️</div><div class="skill-group-title">Architecture</div><div class="skill-tags"><span class="tag">Backend Architecture</span><span class="tag">Debugging</span><span class="tag">Secrets Mgmt</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="section-wrap">
+    <div class="section-eyebrow">Projects</div>
+    <h2>What I've built</h2>
+    <p class="section-sub">Real projects, deployed to real infrastructure — not demos. Production-grade backends that went through real debugging cycles.</p>
+    <div class="projects-grid reveal">
+      <div class="project-card">
+        <div class="project-num">01 — DJANGO</div>
+        <div class="project-name">Goodreads Clone</div>
+        <p class="project-desc">Full-stack book review and social cataloguing platform. User profiles, book listings, reviews, and ratings with JWT authentication and a fully relational database schema built for scale.</p>
+        <div class="project-stack"><span class="stack-tag">Django</span><span class="stack-tag">PostgreSQL</span><span class="stack-tag">JWT</span><span class="stack-tag">REST API</span></div>
+        <a href="http://209.97.161.129/" target="_blank" class="project-link">View Project →</a>
+      </div>
+      <div class="project-card">
+        <div class="project-num">02 — DJANGO</div>
+        <div class="project-name">News Website</div>
+        <p class="project-desc">Dynamic news publishing and aggregation platform. Full CRUD for articles, categories, and authors. Deployed to cloud with a real production setup — env vars, DB connections, error tracking.</p>
+        <div class="project-stack"><span class="stack-tag">Django</span><span class="stack-tag">PostgreSQL</span><span class="stack-tag">REST API</span><span class="stack-tag">DigitalOcean</span></div>
+        <a href="http://azamatjons-project.duckdns.org/en" target="_blank" class="project-link">View Project →</a>
+      </div>
+      <div class="project-card">
+        <div class="project-num">03 — DJANGO</div>
+        <div class="project-name">Instagram Clone</div>
+        <p class="project-desc">Backend API replicating core Instagram features — user registration, JWT authentication, phone verification via Twilio SMS, email confirmation, and full post CRUD with image uploads. Built with a focus on real-world auth flows and secure configuration.</p>
+        <div class="project-stack"><span class="stack-tag">Django</span><span class="stack-tag">DRF</span><span class="stack-tag">PostgreSQL</span><span class="stack-tag">JWT</span><span class="stack-tag">Twilio</span></div>
+        <a href="https://github.com/Azamatjohn/Instagram_clone" target="_blank" class="project-link">View on GitHub →</a>
+      </div>
+      <div class="project-card">
+        <div class="project-num">04 — FASTAPI</div>
+        <div class="project-name">Pizza Delivery Backend</div>
+        <p class="project-desc">RESTful backend API for a pizza delivery service. Order management, menu administration, user authentication, and database integrity. Deployed with proper environment configuration and secrets management.</p>
+        <div class="project-stack"><span class="stack-tag">FastAPI</span><span class="stack-tag">PostgreSQL</span><span class="stack-tag">JWT</span><span class="stack-tag">Railway</span></div>
+        <a href="https://github.com/Azamatjohn/pizza_delivery" class="project-link">View on GitHub →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="blog">
+  <div class="section-wrap">
+    <div class="section-eyebrow">Blog</div>
+    <h2>Writing &amp; notes</h2>
+    <p class="section-sub">Thoughts on backend development, lessons from building in production, and things I wish I'd known earlier.</p>
+    <div class="blog-grid reveal">
+      <a href="#" class="blog-card">
+        <div class="blog-card-img">🚀</div>
+        <div class="blog-card-body">
+          <div class="blog-tag">Backend · Django</div>
+          <div class="blog-title">What I Learned Deploying My First Django App to Production</div>
+          <p class="blog-excerpt">Deployment isn't just pushing code. Environment variables, database migrations, static files, HTTPS — here's everything that went wrong and how I fixed it.</p>
+          <div class="blog-meta"><span>Apr 2026</span><span>5 min read</span></div>
+        </div>
+      </a>
+      <a href="#" class="blog-card">
+        <div class="blog-card-img">⚡</div>
+        <div class="blog-card-body">
+          <div class="blog-tag">FastAPI · APIs</div>
+          <div class="blog-title">Django vs FastAPI: When to Use Which</div>
+          <p class="blog-excerpt">A practical comparison from someone who has built real projects with both frameworks.</p>
+          <div class="blog-meta"><span>Mar 2026</span><span>4 min read</span></div>
+        </div>
+      </a>
+      <a href="#" class="blog-card">
+        <div class="blog-card-img">🔐</div>
+        <div class="blog-card-body">
+          <div class="blog-tag">Auth · Security</div>
+          <div class="blog-title">JWT Authentication in FastAPI: A Practical Guide</div>
+          <p class="blog-excerpt">How I implemented JWT auth in my pizza delivery backend — step by step, no magic.</p>
+          <div class="blog-meta"><span>Feb 2026</span><span>6 min read</span></div>
+        </div>
+      </a>
+      <div class="blog-coming">
+        <span style="font-size:1.5rem">✍️</span>
+        <strong style="color:var(--muted);font-size:0.875rem;">More articles coming soon</strong>
+        <span style="font-size:0.78rem">I write about things I actually build and debug — no fluff.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="section-wrap">
+    <div class="section-eyebrow">Contact</div>
+    <h2>Let's work together</h2>
+    <div class="contact-grid reveal">
+      <div class="contact-form-area">
+        <div class="form-group"><label>Your Name</label><input type="text" placeholder="John Smith"/></div>
+        <div class="form-group"><label>Email Address</label><input type="email" placeholder="john@company.com"/></div>
+        <div class="form-group"><label>Message</label><textarea placeholder="Tell me about the project or opportunity..."></textarea></div>
+        <button class="form-submit">Send Message</button>
+      </div>
+      <div class="contact-info">
+        <h3>Open to meaningful conversations.</h3>
+        <p>If you're working on a product that needs a reliable backend and someone who takes ownership of their code — feel free to reach out. I'm always open to opportunities to build solid systems.</p>
+        <div class="contact-links">
+          <a href="mailto:abdulazizovjohn@gmail.com" class="contact-link"><div class="cl-icon">✉️</div><div class="cl-info"><span class="cl-platform">Email</span><span class="cl-value">abdulazizovjohn@gmail.com</span></div></a>
+          <a href="https://linkedin.com/in/azamatjon-abdulazizov" target="_blank" class="contact-link"><div class="cl-icon">💼</div><div class="cl-info"><span class="cl-platform">LinkedIn</span><span class="cl-value">/in/azamatjon-abdulazizov</span></div></a>
+          <a href="https://t.me/Abdulazizov_03" target="_blank" class="contact-link"><div class="cl-icon">✈️</div><div class="cl-info"><span class="cl-platform">Telegram</span><span class="cl-value">@Abdulazizov_03</span></div></a>
+          <a href="https://github.com/Azamatjohn/azamatjon-abdulazizov" target="_blank" class="contact-link"><div class="cl-icon">🐙</div><div class="cl-info"><span class="cl-platform">GitHub</span><span class="cl-value">github.com/Azamatjohn</span></div></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Azamatjon Abdulazizov</div>
+    <p>Built with <span>HTML · CSS · JS</span> · Busan, South Korea 🇰🇷</p>
+    <p>© 2026 — All rights reserved</p>
+  </div>
+</footer>
+
+<script>
+  // Dark mode
+  const toggle = document.getElementById('themeToggle');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const saved = localStorage.getItem('theme');
+  const initDark = saved ? saved === 'dark' : prefersDark;
+  if (initDark) { document.documentElement.setAttribute('data-theme', 'dark'); toggle.textContent = '☀️'; }
+
+  toggle.addEventListener('click', () => {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    if (isDark) {
+      document.documentElement.removeAttribute('data-theme');
+      toggle.textContent = '🌙';
+      localStorage.setItem('theme', 'light');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      toggle.textContent = '☀️';
+      localStorage.setItem('theme', 'dark');
+    }
+  });
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.08 });
+  reveals.forEach(el => observer.observe(el));
+
+  // Nav active state
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a:not(.nav-cta)');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) current = s.id; });
+    navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
+  });
+
+  // Contact form
+  document.querySelector('.form-submit').addEventListener('click', () => {
+    const btn = document.querySelector('.form-submit');
+    btn.textContent = '✓ Message Sent!';
+    btn.style.background = '#134f37';
+    setTimeout(() => { btn.textContent = 'Send Message'; btn.style.background = ''; }, 3000);
+  });
+</script>
+</body>
+</html>
