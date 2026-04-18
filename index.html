@@ -90,7 +90,7 @@
           <div class="about-list-item"><span class="ali-label">Location</span><span class="ali-val">Busan, South Korea 🇰🇷</span></div>
         </div>
         <div class="about-stats-row">
-          <div class="mini-stat"><div class="mini-stat-num">3+</div><div class="mini-stat-label">Projects Shipped</div></div>
+          <div class="mini-stat"><div class="mini-stat-num">5+</div><div class="mini-stat-label">Projects Shipped</div></div>
           <div class="mini-stat"><div class="mini-stat-num">∞</div><div class="mini-stat-label">Bugs Resolved</div></div>
         </div>
       </div>
@@ -104,12 +104,14 @@
     <h2>What I work with</h2>
     <p class="section-sub">A focused stack built around Python backend development, REST API design, and cloud-hosted production environments.</p>
     <div class="skills-grid reveal">
-      <div class="skill-group"><div class="skill-icon">🐍</div><div class="skill-group-title">Languages</div><div class="skill-tags"><span class="tag">Python</span><span class="tag">SQL</span></div></div>
-      <div class="skill-group"><div class="skill-icon">⚡</div><div class="skill-group-title">Frameworks</div><div class="skill-tags"><span class="tag">Django</span><span class="tag">FastAPI</span></div></div>
-      <div class="skill-group"><div class="skill-icon">🔌</div><div class="skill-group-title">APIs &amp; Auth</div><div class="skill-tags"><span class="tag">REST APIs</span><span class="tag">JWT</span><span class="tag">Authentication</span></div></div>
-      <div class="skill-group"><div class="skill-icon">🗄️</div><div class="skill-group-title">Database</div><div class="skill-tags"><span class="tag">PostgreSQL</span><span class="tag">Schema Design</span><span class="tag">Relationships</span></div></div>
-      <div class="skill-group"><div class="skill-icon">☁️</div><div class="skill-group-title">DevOps &amp; Cloud</div><div class="skill-tags"><span class="tag">DigitalOcean</span><span class="tag">Railway</span><span class="tag">Git</span><span class="tag">Env Config</span></div></div>
-      <div class="skill-group"><div class="skill-icon">🏗️</div><div class="skill-group-title">Architecture</div><div class="skill-tags"><span class="tag">Backend Architecture</span><span class="tag">Debugging</span><span class="tag">Secrets Mgmt</span></div></div>
+      <div class="skill-group"><div class="skill-icon">🐍</div><div class="skill-group-title">Languages</div><div class="skill-tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">TypeScript</span></div></div>
+      <div class="skill-group"><div class="skill-icon">⚡</div><div class="skill-group-title">Frameworks</div><div class="skill-tags"><span class="tag">Django</span><span class="tag">FastAPI</span><span class="tag">Next.js 14</span></div></div>
+      <div class="skill-group"><div class="skill-icon">🔌</div><div class="skill-group-title">APIs &amp; Auth</div><div class="skill-tags"><span class="tag">REST APIs</span><span class="tag">JWT</span><span class="tag">RBAC</span><span class="tag">Refresh Tokens</span></div></div>
+      <div class="skill-group"><div class="skill-icon">🗄️</div><div class="skill-group-title">Database</div><div class="skill-tags"><span class="tag">PostgreSQL</span><span class="tag">Row-Level Security</span><span class="tag">SQLAlchemy</span><span class="tag">Alembic</span></div></div>
+      <div class="skill-group"><div class="skill-icon">⚙️</div><div class="skill-group-title">Jobs &amp; Cache</div><div class="skill-tags"><span class="tag">Redis</span><span class="tag">Celery</span><span class="tag">Celery Beat</span></div></div>
+      <div class="skill-group"><div class="skill-icon">☁️</div><div class="skill-group-title">DevOps &amp; Cloud</div><div class="skill-tags"><span class="tag">Render</span><span class="tag">Vercel</span><span class="tag">DigitalOcean</span><span class="tag">Git</span></div></div>
+      <div class="skill-group"><div class="skill-icon">💳</div><div class="skill-group-title">Integrations</div><div class="skill-tags"><span class="tag">Stripe</span><span class="tag">Resend</span><span class="tag">Twilio</span></div></div>
+      <div class="skill-group"><div class="skill-icon">🏗️</div><div class="skill-group-title">Architecture</div><div class="skill-tags"><span class="tag">Multi-Tenancy</span><span class="tag">Audit Logging</span><span class="tag">Rate Limiting</span></div></div>
     </div>
   </div>
 </section>
@@ -119,6 +121,85 @@
     <div class="section-eyebrow">Projects</div>
     <h2>What I've built</h2>
     <p class="section-sub">Real projects, deployed to real infrastructure — not demos. Production-grade backends that went through real debugging cycles.</p>
+
+     <!-- Featured Project -->
+    <div class="project-featured reveal">
+      <div class="project-featured-left">
+        <div class="project-num">00 — FEATURED · FASTAPI · NEXT.JS</div>
+        <div class="project-name" style="font-size:1.5rem">NexusHQ — Multi-Tenant SaaS Dashboard</div>
+        <p class="project-desc" style="font-size:0.925rem">A production-grade full-stack SaaS platform built from scratch. Each workspace is isolated at the database level using PostgreSQL Row-Level Security — not just application-level checks. Features JWT auth with refresh token rotation, RBAC (owner/admin/member), Stripe billing with webhook-driven subscription management, Redis + Celery usage analytics pipeline, and email invites via Resend. 10-screen Next.js frontend deployed live on Vercel.</p>
+        <div class="project-highlights">
+          <div class="ph-item"><span class="ph-dot"></span>PostgreSQL Row-Level Security for tenant isolation</div>
+          <div class="ph-item"><span class="ph-dot"></span>Stripe webhooks — checkout, upgrades, cancellations</div>
+          <div class="ph-item"><span class="ph-dot"></span>Redis counters → Celery Beat → Postgres analytics</div>
+          <div class="ph-item"><span class="ph-dot"></span>Deployed: Render (backend) + Vercel (frontend)</div>
+        </div>
+        <div class="project-stack">
+          <span class="stack-tag">FastAPI</span><span class="stack-tag">PostgreSQL RLS</span><span class="stack-tag">Redis</span><span class="stack-tag">Celery</span><span class="stack-tag">Stripe</span><span class="stack-tag">Next.js 14</span><span class="stack-tag">TypeScript</span><span class="stack-tag">Render</span><span class="stack-tag">Vercel</span>
+        </div>
+        <div class="project-featured-links">
+          <a href="https://multi-tenant-saas-dashboard-hazel.vercel.app" target="_blank" class="btn btn-primary" style="font-size:0.825rem;padding:0.6rem 1.4rem">Live Demo →</a>
+          <a href="https://github.com/Azamatjohn/Multi-Tenant-Saas-Dashboard" target="_blank" class="btn btn-ghost" style="font-size:0.825rem;padding:0.6rem 1.4rem">GitHub →</a>
+        </div>
+      </div>
+      <div class="project-featured-right">
+        <!-- Dashboard preview -->
+        <div class="dash-preview">
+          <div class="dash-topbar">
+            <div class="dash-dots"><span class="dd r"></span><span class="dd y"></span><span class="dd g"></span></div>
+            <div class="dash-url">multi-tenant-saas-dashboard-hazel.vercel.app/acme-corp</div>
+          </div>
+          <div class="dash-body">
+            <div class="dash-sidebar">
+              <div class="ds-logo">N</div>
+              <div class="ds-workspace">acme-corp</div>
+              <div class="ds-nav">
+                <div class="ds-nav-item active">Dashboard</div>
+                <div class="ds-nav-item">Members</div>
+                <div class="ds-nav-item">Analytics</div>
+                <div class="ds-nav-item">Billing</div>
+                <div class="ds-nav-item">Settings</div>
+              </div>
+            </div>
+            <div class="dash-main">
+              <div class="dash-header">
+                <span class="dash-title">Dashboard</span>
+                <span class="dash-invite-btn">Invite member</span>
+              </div>
+              <div class="dash-stats">
+                <div class="ds-stat"><div class="ds-stat-icon blue"></div><div class="ds-stat-label">Members</div><div class="ds-stat-val">24</div></div>
+                <div class="ds-stat"><div class="ds-stat-icon green"></div><div class="ds-stat-label">Active</div><div class="ds-stat-val">18</div></div>
+                <div class="ds-stat"><div class="ds-stat-icon purple"></div><div class="ds-stat-label">API calls</div><div class="ds-stat-val">128k</div></div>
+                <div class="ds-stat"><div class="ds-stat-icon amber"></div><div class="ds-stat-label">Plan</div><div class="ds-stat-val">Pro</div></div>
+              </div>
+              <div class="dash-chart-row">
+                <div class="dash-chart">
+                  <div class="dc-label">API usage — last 30 days</div>
+                  <div class="dc-bars">
+                    <div class="dc-bar" style="height:35%"></div><div class="dc-bar" style="height:55%"></div>
+                    <div class="dc-bar" style="height:40%"></div><div class="dc-bar" style="height:72%"></div>
+                    <div class="dc-bar" style="height:48%"></div><div class="dc-bar" style="height:88%"></div>
+                    <div class="dc-bar" style="height:62%"></div><div class="dc-bar" style="height:78%"></div>
+                    <div class="dc-bar" style="height:54%"></div><div class="dc-bar" style="height:91%"></div>
+                    <div class="dc-bar" style="height:67%"></div><div class="dc-bar" style="height:95%"></div>
+                  </div>
+                </div>
+                <div class="dash-actions">
+                  <div class="da-label">Quick actions</div>
+                  <div class="da-item">Invite a member <span>→</span></div>
+                  <div class="da-item">View analytics <span>→</span></div>
+                  <div class="da-item">Manage billing <span>→</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    
     <div class="projects-grid reveal">
       <div class="project-card">
         <div class="project-num">01 — DJANGO</div>
