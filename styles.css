@@ -257,11 +257,8 @@ h2 {
 /* ── SKILLS ── */
 #skills { background: var(--bg); border-bottom: 1px solid var(--border); }
 
-.skills-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
-  background: var(--border); border: 1px solid var(--border);
-  border-radius: 8px; overflow: hidden;
-}
+.skills-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+
 .skill-group { background: var(--white); padding: 2rem; transition: background 0.2s; }
 .skill-group:hover { background: var(--bg2); }
 .skill-icon {
@@ -277,6 +274,112 @@ h2 {
   color: var(--muted); border-radius: 100px; transition: all 0.2s;
 }
 .skill-group:hover .tag { background: var(--accent-light); border-color: rgba(26,107,74,0.2); color: var(--accent); }
+
+/* ── FEATURED PROJECT ── */
+.project-featured {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2.5rem;
+  margin-bottom: 0;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+.project-featured::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), #2ecc8a);
+}
+.project-featured:hover { border-color: var(--accent); box-shadow: 0 12px 40px rgba(26,107,74,0.1); }
+.project-featured-left { display: flex; flex-direction: column; }
+.project-featured-left .project-name { margin-bottom: 1rem; }
+.project-featured-left .project-desc { margin-bottom: 1.25rem; }
+.project-highlights { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.25rem; }
+.ph-item { display: flex; align-items: center; gap: 0.6rem; font-size: 0.82rem; color: var(--muted); }
+.ph-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+.project-featured-links { display: flex; gap: 0.75rem; margin-top: auto; padding-top: 1.25rem; }
+.project-featured-right { display: flex; align-items: center; }
+
+/* Dashboard preview */
+.dash-preview {
+  width: 100%;
+  background: #0f172a;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #1e293b;
+}
+.dash-topbar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0.875rem;
+  background: #1e293b;
+  border-bottom: 1px solid #334155;
+}
+.dash-dots { display: flex; gap: 0.35rem; }
+.dd { width: 10px; height: 10px; border-radius: 50%; }
+.dd.r { background: #ef4444; }
+.dd.y { background: #f59e0b; }
+.dd.g { background: #22c55e; }
+.dash-url { font-size: 0.62rem; color: #64748b; font-family: monospace; background: #0f172a; padding: 0.2rem 0.6rem; border-radius: 4px; flex: 1; text-align: center; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.dash-body { display: flex; height: 260px; }
+.dash-sidebar {
+  width: 110px;
+  background: #0f172a;
+  border-right: 1px solid #1e293b;
+  padding: 0.875rem 0.625rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex-shrink: 0;
+}
+.ds-logo {
+  width: 26px; height: 26px;
+  background: white;
+  color: #0f172a;
+  border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.75rem; font-weight: 800;
+  margin-bottom: 0.25rem;
+}
+.ds-workspace { font-size: 0.6rem; color: #64748b; margin-bottom: 0.75rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ds-nav { display: flex; flex-direction: column; gap: 0.15rem; }
+.ds-nav-item { font-size: 0.6rem; color: #64748b; padding: 0.3rem 0.5rem; border-radius: 4px; cursor: pointer; }
+.ds-nav-item.active { background: white; color: #0f172a; font-weight: 600; }
+.dash-main { flex: 1; padding: 0.75rem; display: flex; flex-direction: column; gap: 0.6rem; overflow: hidden; }
+.dash-header { display: flex; align-items: center; justify-content: space-between; }
+.dash-title { font-size: 0.7rem; font-weight: 700; color: white; }
+.dash-invite-btn { font-size: 0.55rem; background: white; color: #0f172a; padding: 0.25rem 0.6rem; border-radius: 4px; font-weight: 600; }
+.dash-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.4rem; }
+.ds-stat { background: #1e293b; border-radius: 6px; padding: 0.5rem; }
+.ds-stat-icon { width: 14px; height: 14px; border-radius: 3px; margin-bottom: 0.3rem; }
+.ds-stat-icon.blue { background: #3b82f6; }
+.ds-stat-icon.green { background: #22c55e; }
+.ds-stat-icon.purple { background: #a855f7; }
+.ds-stat-icon.amber { background: #f59e0b; }
+.ds-stat-label { font-size: 0.5rem; color: #64748b; margin-bottom: 0.15rem; }
+.ds-stat-val { font-size: 0.75rem; font-weight: 700; color: white; }
+.dash-chart-row { display: grid; grid-template-columns: 1.6fr 1fr; gap: 0.4rem; flex: 1; min-height: 0; }
+.dash-chart { background: #1e293b; border-radius: 6px; padding: 0.6rem; display: flex; flex-direction: column; }
+.dc-label { font-size: 0.5rem; color: #64748b; margin-bottom: 0.5rem; }
+.dc-bars { display: flex; align-items: flex-end; gap: 2px; flex: 1; }
+.dc-bar { flex: 1; background: #334155; border-radius: 2px 2px 0 0; transition: background 0.2s; }
+.dash-chart:hover .dc-bar { background: #475569; }
+.dash-actions { background: #1e293b; border-radius: 6px; padding: 0.6rem; }
+.da-label { font-size: 0.5rem; color: #64748b; margin-bottom: 0.4rem; }
+.da-item { display: flex; justify-content: space-between; font-size: 0.55rem; color: #94a3b8; padding: 0.3rem 0.4rem; background: #0f172a; border-radius: 3px; margin-bottom: 0.25rem; }
+.da-item span { color: #64748b; }
+
+@media (max-width: 900px) {
+  .project-featured { grid-template-columns: 1fr; }
+  .project-featured-right { display: none; }
+}
 
 /* ── PROJECTS ── */
 #projects { background: var(--white); border-bottom: 1px solid var(--border); }
